@@ -217,25 +217,25 @@ sudo pacman -S v2ray
 sudo pacman -S qv2ray
 # configure qv2ray
 
-	sudo pacman -S cgproxy
-	sudo -e /etc/cgproxy/config.json
-	#-"cgroup_proxy": [],
-	#+"cgroup_proxy": ["/"],
-	sudo setcap "cap_net_admin,cap_net_bind_service=ep" /usr/bin/v2ray
-	systemctl enable --now cgproxy.service
+sudo pacman -S cgproxy
+sudo -e /etc/cgproxy/config.json
+#-"cgroup_proxy": [],
+#+"cgroup_proxy": ["/"],
+sudo setcap "cap_net_admin,cap_net_bind_service=ep" /usr/bin/v2ray
+systemctl enable --now cgproxy.service
 
-# https://www.91ajs.com/information/google-chrome-ajiasu-socks5-proxy.html
-mkdir ~/proxy
-wget https://github.com/FelisCatus/SwitchyOmega/releases/download/v2.5.20/SwitchyOmega_Chromium.crx
-mv SwitchyOmega_Chromium.crx SwitchyOmega_Chromium.zip
-unzip SwitchyOmega_Chromium.zip -d switchyOmega
+sudo -e /etc/resolv.conf
+#+nameserver 8.8.8.8
+#+nameserver 2001:4860:4860::8888
+#+nameserver 8.8.4.4
+#+nameserver 2001:4860:4860::8844
+sudo chattr +i /etc/resolv.conf
 
-	sudo -e /etc/resolv.conf
-	#+nameserver 8.8.8.8
-	#+nameserver 2001:4860:4860::8888
-	#+nameserver 8.8.4.4
-	#+nameserver 2001:4860:4860::8844
-	sudo chattr +i /etc/resolv.conf
+	# https://www.91ajs.com/information/google-chrome-ajiasu-socks5-proxy.html
+	mkdir ~/proxy
+	wget https://github.com/FelisCatus/SwitchyOmega/releases/download/v2.5.20/SwitchyOmega_Chromium.crx
+	mv SwitchyOmega_Chromium.crx SwitchyOmega_Chromium.zip
+	unzip SwitchyOmega_Chromium.zip -d switchyOmega
 ```
 
 ## cli
@@ -251,6 +251,8 @@ sudo pacman -S ranger
 git clone https://github.com/AidanUnhappy/config.git
 cd ~/Aidan/FD/config
 ./init.sh
+
+shutdown -r now
 ```
 
 ```sh

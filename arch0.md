@@ -44,6 +44,11 @@ sudo dd if=~/Downloads/archlinux-2022.03.01-x86_64.iso of=/dev/sdx bs=4M oflag=s
 gnome-multi-writer
 ```
 
+## boot the live environment
+
+- disable secure boot
+- boot in uefi mode
+
 ## installation experience enhancement
 
 ```sh
