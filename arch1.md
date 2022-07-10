@@ -293,6 +293,8 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 sudo pacman -S ueberzug
 # https://github.com/ranger/ranger/wiki/Image-Previews#with-ueberzug
+yay -S epub-thumbnailer-git
+sudo pacman -S calibre
 
 sudo pacman -S zathura zathura-pdf-mupdf
 # https://wiki.archlinux.org/title/zathura
