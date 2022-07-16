@@ -265,6 +265,10 @@ yay -S ccat
 # zsh
 
 # https://github.com/zimfw/zimfw
+
+sudo pacman -S neofetch
+
+sudo pacman -S tree
 ```
 
 ```sh
@@ -315,7 +319,7 @@ sudo pacman -S thunar
 ## cloud
 
 ```sh
-yay -S nutstore-experimental
+sudo pacman -S nutstore
 
 yay -S electron9-bin
 yay -S baidunetdisk-electron

@@ -46,8 +46,12 @@ gnome-multi-writer
 
 ## boot the live environment
 
-- disable secure boot
-- boot in uefi mode
+```sh
+disable secure boot
+# https://m.xitongzhijia.net/xtjc/20211107/231719.html
+
+boot in uefi mode
+```
 
 ## installation experience enhancement
 
