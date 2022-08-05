@@ -215,6 +215,7 @@ startx
 sudo pacman -S v2ray
 
 sudo pacman -S qv2ray
+sudo pacman -S qv2ray-plugin-ssr-dev-git
 # configure qv2ray
 
 sudo pacman -S cgproxy
