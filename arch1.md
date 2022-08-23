@@ -336,6 +336,10 @@ sudo pacman -S keepassxc
 
 ```sh
 sudo pacman -S pdfarranger
+
+sudo pacman -S xournalpp
+
+sudo pacman -S okular
 ```
 
 ## fcitx
