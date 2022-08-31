@@ -322,7 +322,7 @@ sudo pacman -S thunar
 ```sh
 sudo pacman -S nutstore
 
-yay -S electron9-bin
+yay -S electron11-bin
 yay -S baidunetdisk-electron
 ```
 
