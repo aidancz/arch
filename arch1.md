@@ -88,7 +88,7 @@ sudo -e /etc/hosts
 #+140.82.113.4	github.com
 # https://github.com/521xueweihan/GitHub520
 
-mkdir -p ~/Aidan/FD
+mkdir
 
 git clone https://github.com/AidanUnhappy/dwm.git
 sudo make clean install
@@ -250,7 +250,6 @@ sudo pacman -S neovim
 sudo pacman -S ranger
 
 git clone https://github.com/AidanUnhappy/config.git
-cd ~/Aidan/FD/config
 ./init.sh
 
 shutdown -r now

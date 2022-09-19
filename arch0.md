@@ -189,7 +189,7 @@ pacstrap /mnt base-devel dhcpcd iwd vim bash-completion
 
 
 
-# Configure the system
+# configure the system
 
 ## fstab
 
