@@ -304,6 +304,10 @@ sudo pacman -S zathura zathura-pdf-mupdf
 # https://wiki.archlinux.org/title/zathura
 
 sudo pacman -S feh
+
+yay -S h-m-m-git
+
+sudo pacman -S trash-cli
 ```
 
 
