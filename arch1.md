@@ -54,6 +54,8 @@ sudo -e /etc/pacman.conf
 sudo pacman -Syyu --noconfirm
 
 sudo pacman -S archlinuxcn-keyring
+
+sudo pacman -S downgrade
 ```
 
 
