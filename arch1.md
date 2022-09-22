@@ -189,8 +189,8 @@ sudo pacman -S noto-fonts-emoji
 ```sh
 # hidpi
 
-https://wiki.archlinux.org/title/xorg#Display_size_and_DPI
-https://wiki.archlinux.org/title/HiDPI
+# https://wiki.archlinux.org/title/xorg#Display_size_and_DPI
+# https://wiki.archlinux.org/title/HiDPI
 
 vim ~/.Xresources
 #+Xft.dpi: 108
@@ -329,6 +329,23 @@ sudo pacman -S nutstore
 
 yay -S electron11-bin
 yay -S baidunetdisk-electron
+
+rslsync
+sudo pacman -S rslsync
+systemctl enable --now rslsync
+http://localhost:8888
+# https://program-think.blogspot.com/2015/01/BitTorrent-Sync.html
+# https://program-think.blogspot.com/2017/08/GFW-Resilio-Sync.html
+mkdir ~/rslsync
+sudo setfacl -R -m "u:rslsync:rwx" /home/aidan
+# https://kenfavors.com/code/how-to-add-user-permissions-to-a-folder-in-ubuntu/
+
+sudo pacman -S qbittorrent-enhanced-git
+# https://github.com/XIU2/TrackersListCollection
+# https://mp.weixin.qq.com/s/8pq51vkhiNh-y2eNyBdsiQ
+test:
+# https://ubuntu.com/download/alternative-downloads#bittorrent
+	sudo pacman -S aria2
 ```
 
 ## password

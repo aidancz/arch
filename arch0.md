@@ -168,15 +168,12 @@ swapon /dev/nvme0n1p2
 
 ```sh
 vim /etc/pacman.d/mirrorlist
-#+Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
-#+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
+wget "https://archlinux.org/mirrorlist/?country=CN&protocol=http&protocol=https&ip_version=4&use_mirror_status=on"
+# https://archlinux.org/mirrorlist/
+	#+Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
+	#+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 
 # /etc/pacman.d/mirrorlist will later be copied to the new system by pacstrap, so it is worth getting right
-
-
-
-	wget "https://archlinux.org/mirrorlist/?country=CN&protocol=http&protocol=https&ip_version=4&use_mirror_status=on"
-	# https://archlinux.org/mirrorlist/
 ```
 
 ## install essential packages
