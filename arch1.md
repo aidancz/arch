@@ -298,15 +298,22 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # ranger
 
 sudo pacman -S ueberzug
+# preview image
 # https://github.com/ranger/ranger/wiki/Image-Previews#with-ueberzug
 yay -S epub-thumbnailer-git
-sudo pacman -S calibre
+# preview epub
+# scope.sh in ranger config
 
 sudo pacman -S zathura zathura-pdf-mupdf
 # https://wiki.archlinux.org/title/zathura
+yay -S zaread-git
+sudo pacman -S libreoffice-fresh
+sudo pacman -S jdk-openjdk # optional dependencies
+# https://github.com/paoloap/zaread
+# https://aur.archlinux.org/packages/zaread-git
+	sudo pacman -S pandoc
 
 sudo pacman -S feh
-
 yay -S h-m-m-git
 
 sudo pacman -S trash-cli
@@ -348,22 +355,6 @@ test:
 	sudo pacman -S aria2
 ```
 
-## password
-
-```sh
-sudo pacman -S keepassxc
-```
-
-## pdf
-
-```sh
-sudo pacman -S pdfarranger
-
-sudo pacman -S okular
-
-sudo pacman -S xournalpp
-```
-
 ## fcitx
 
 ```sh
@@ -379,9 +370,32 @@ sudo -e /etc/environment
 #+GLFW_IM_MODULE=ibus
 ```
 
-## screen capture
+## general
 
 ```sh
+# password
+
+sudo pacman -S keepassxc
+```
+
+```sh
+# pdf
+
+sudo pacman -S pdfarranger
+
+sudo pacman -S xournalpp
+# add image, text
+```
+
+```sh
+# office
+
+	sudo pacman -S libreoffice-fresh
+```
+
+```sh
+# screen capture
+
 sudo pacman -S flameshot
 ```
 
