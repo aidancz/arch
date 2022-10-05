@@ -233,7 +233,36 @@ sudo -e /etc/resolv.conf
 #+nameserver 8.8.4.4
 #+nameserver 2001:4860:4860::8844
 sudo chattr +i /etc/resolv.conf
+```
 
+```sh
+# https://blog.linioi.com/posts/clash-on-arch/
+# https://hsingko.github.io/post/2021/07/05/how-to-use-clash-subscribe/
+# https://zhuanlan.zhihu.com/p/396272999
+
+sudo pacman -S clash
+
+clash
+# generate config file in ~/.config/clash, ctrl+c to exit
+nvim /home/aidan/.config/clash/config.yaml
+# copy config
+#-port: 7890
+#+port: 8889
+
+sudo systemctl enable --now clash@aidan
+systemctl status clash@aidan
+
+http://clash.razord.top
+or
+git clone https://github.com/Dreamacro/clash-dashboard.git
+cd clash-dashboard
+git checkout -b gh-pages origin/gh-pages
+nvim /home/aidan/.config/clash/config.yaml
+#+external-ui: /home/aidan/a_sr/clash-dashboard
+http://127.0.0.1:9090/ui/#/proxies
+```
+
+```sh
 	# https://www.91ajs.com/information/google-chrome-ajiasu-socks5-proxy.html
 	mkdir ~/proxy
 	wget https://github.com/FelisCatus/SwitchyOmega/releases/download/v2.5.20/SwitchyOmega_Chromium.crx
