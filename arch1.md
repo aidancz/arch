@@ -182,6 +182,7 @@ sudo pacman -S adobe-source-han-sans-cn-fonts
 sudo pacman -S adobe-source-han-sans-tw-fonts
 # chinese
 
+sudo pacman -S noto-fonts
 sudo pacman -S noto-fonts-emoji
 # emoji
 ```
