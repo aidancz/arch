@@ -271,6 +271,19 @@ http://127.0.0.1:9090/ui/#/proxies
 	unzip SwitchyOmega_Chromium.zip -d switchyOmega
 ```
 
+```sh
+sudo -e /etc/pacman.d/mirrorlist
+wget "https://archlinux.org/mirrorlist/?country=HK&protocol=http&protocol=https&ip_version=4&use_mirror_status=on"
+# https://archlinux.org/mirrorlist/
+
+sudo -e /etc/sudoers
+#+Defaults env_keep += "ftp_proxy http_proxy https_proxy no_proxy"
+sudo -e /etc/pacman.d/gnupg/dirmngr.conf
+#+honor-http-proxy
+# https://wiki.archlinux.org/title/pacman#Pacman_does_not_honor_proxy_settings
+# https://wiki.archlinux.org/title/Sudo#Environment_variables
+```
+
 ## cli
 
 ```sh
