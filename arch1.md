@@ -147,13 +147,38 @@ sudo pacman -S brightnessctl
 ```sh
 # multimedia
 
-sudo pacman -S alsa-utils # amixer
-# https://blog.fearcat.in/a?ID=01050-2a2a6a1f-a8c0-4d1e-96ab-14050ffb4cb5
+	sudo pacman -S alsa-utils # amixer
+	sudo -e /etc/asound.conf
+	#+defaults.pcm.card 1
+	#+defaults.pcm.device 0
+	#+defaults.ctl.card 1
+	# https://blog.fearcat.in/a?ID=01050-2a2a6a1f-a8c0-4d1e-96ab-14050ffb4cb5
 
-sudo -e /etc/asound.conf
-#+defaults.pcm.card 1
-#+defaults.pcm.device 0
-#+defaults.ctl.card 1
+
+
+sudo pacman -S bluez bluez-utils
+sudo -e /etc/bluetooth/main.conf
+#+FastConnectable = true
+#+AutoEnable=true
+#+Experimental = true
+sudo systemctl enable --now bluetooth
+
+sudo pacman -S pulseaudio-alsa pulseaudio-bluetooth pavucontrol
+
+pulseaudio --start
+	pulseaudio -k
+
+bluetoothctl
+power on
+agent on
+default-agent
+scan on
+pair 84:26:7A:34:0E:B3
+trust 84:26:7A:34:0E:B3
+connect 84:26:7A:34:0E:B3
+	remove 84:26:7A:34:0E:B3
+
+# https://bbs.archlinuxcn.org/viewtopic.php?pid=43002#p43002
 ```
 
 ```sh
@@ -183,8 +208,7 @@ sudo pacman -S adobe-source-han-sans-tw-fonts
 # chinese
 
 sudo pacman -S noto-fonts
-sudo pacman -S noto-fonts-emoji
-# emoji
+sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 ```
 
 ```sh
