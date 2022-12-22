@@ -283,7 +283,7 @@ git clone https://github.com/Dreamacro/clash-dashboard.git
 cd clash-dashboard
 git checkout -b gh-pages origin/gh-pages
 nvim /home/aidan/.config/clash/config.yaml
-#+external-ui: /home/aidan/a_sr/clash-dashboard
+#+external-ui: /path/to/clash-dashboard
 http://127.0.0.1:9090/ui/#/proxies
 ```
 
