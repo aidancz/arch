@@ -455,6 +455,12 @@ sudo pacman -S xournalpp
 ```
 
 ```sh
+# image
+
+sudo pacman -S imagemagick
+```
+
+```sh
 # office
 
 	sudo pacman -S libreoffice-fresh
