@@ -51,11 +51,11 @@ sudo -e /etc/pacman.conf
 #+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 # https://github.com/archlinuxcn/repo
 
-sudo pacman -Syyu --noconfirm
+pacman -Syyu --noconfirm
 
-sudo pacman -S archlinuxcn-keyring
+pacman -S archlinuxcn-keyring
 
-sudo pacman -S downgrade
+pacman -S downgrade
 ```
 
 
@@ -63,24 +63,24 @@ sudo pacman -S downgrade
 # let's download!
 
 ```sh
-sudo pacman -S yay # archlinuxcn
-sudo pacman -S wget curl git
+pacman -S yay # archlinuxcn
+pacman -S wget curl git
 
-sudo pacman -S man tldr
+pacman -S man tldr
 ```
 
 ```sh
 # display server
 
-sudo pacman -S xorg
-	sudo pacman -S hsetroot
-	sudo pacman -S picom
+pacman -S xorg
+	pacman -S hsetroot
+	pacman -S picom
 ```
 
 ```sh
 # display drivers
 
-sudo pacman -S xf86-video-amdgpu
+pacman -S xf86-video-amdgpu
 ```
 
 ```sh
@@ -102,7 +102,7 @@ sudo make clean install
 yay -S libxft-bgra
 # https://www.reddit.com/r/suckless/comments/k5k4sm/st_keeps_crashing_when_displaying_emojis/
 
-sudo pacman -S dmenu
+pacman -S dmenu
 
 yay -S google-chrome
 ```
@@ -110,7 +110,7 @@ yay -S google-chrome
 ```sh
 # display manager
 
-sudo pacman -S xorg-xinit
+pacman -S xorg-xinit
 # https://wiki.archlinux.org/title/Xinit
 
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
@@ -136,18 +136,18 @@ startx # not now!
 ```sh
 # power management
 
-sudo pacman -S polkit
+pacman -S polkit
 # https://wiki.archlinux.org/title/Systemd#Power_management
 
-sudo pacman -S brightnessctl
+pacman -S brightnessctl
 
-	sudo pacman -S xfce4-power-manager
+	pacman -S xfce4-power-manager
 ```
 
 ```sh
 # multimedia
 
-	sudo pacman -S alsa-utils # amixer
+	pacman -S alsa-utils # amixer
 	sudo -e /etc/asound.conf
 	#+defaults.pcm.card 1
 	#+defaults.pcm.device 0
@@ -156,14 +156,14 @@ sudo pacman -S brightnessctl
 
 
 
-sudo pacman -S bluez bluez-utils
+pacman -S bluez bluez-utils
 sudo -e /etc/bluetooth/main.conf
 #+FastConnectable = true
 #+AutoEnable=true
 #+Experimental = true
 sudo systemctl enable --now bluetooth
 
-sudo pacman -S pulseaudio-alsa pulseaudio-bluetooth pavucontrol
+pacman -S pulseaudio-alsa pulseaudio-bluetooth pavucontrol
 
 pulseaudio --start
 	pulseaudio -k
@@ -184,31 +184,31 @@ connect 84:26:7A:34:0E:B3
 ```sh
 # networking
 
-sudo pacman -S network-manager-applet
+pacman -S network-manager-applet
 sudo systemctl enable NetworkManager.service
 ```
 
 ```sh
 # laptop touchpads
 
-sudo pacman -S xf86-input-synaptics
+pacman -S xf86-input-synaptics
 ```
 
 ```sh
 # fonts
 
-sudo pacman -S adobe-source-code-pro-fonts
+pacman -S adobe-source-code-pro-fonts
 # console
 
-sudo pacman -S ttf-liberation
+pacman -S ttf-liberation
 # english
 
-sudo pacman -S adobe-source-han-sans-cn-fonts
-sudo pacman -S adobe-source-han-sans-tw-fonts
+pacman -S adobe-source-han-sans-cn-fonts
+pacman -S adobe-source-han-sans-tw-fonts
 # chinese
 
-sudo pacman -S noto-fonts
-sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+pacman -S noto-fonts
+pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 ```
 
 ```sh
@@ -239,13 +239,13 @@ startx
 ```sh
 # https://archlinuxstudio.github.io/ArchLinuxTutorial/#/rookie/transparentProxy
 
-sudo pacman -S v2ray
+pacman -S v2ray
 
-sudo pacman -S qv2ray
-sudo pacman -S qv2ray-plugin-ssr-dev-git
+pacman -S qv2ray
+pacman -S qv2ray-plugin-ssr-dev-git
 # configure qv2ray
 
-sudo pacman -S cgproxy
+pacman -S cgproxy
 sudo -e /etc/cgproxy/config.json
 #-"cgroup_proxy": [],
 #+"cgroup_proxy": ["/"],
@@ -265,7 +265,7 @@ sudo chattr +i /etc/resolv.conf
 # https://hsingko.github.io/post/2021/07/05/how-to-use-clash-subscribe/
 # https://zhuanlan.zhihu.com/p/396272999
 
-sudo pacman -S clash
+pacman -S clash
 
 clash
 # generate config file in ~/.config/clash, ctrl+c to exit
@@ -311,12 +311,12 @@ sudo -e /etc/pacman.d/gnupg/dirmngr.conf
 ## cli
 
 ```sh
-sudo pacman -S zsh
+pacman -S zsh
 chsh -s /usr/bin/zsh aidan
 
-sudo pacman -S neovim
+pacman -S neovim
 
-sudo pacman -S ranger
+pacman -S ranger
 
 git clone https://github.com/AidanUnhappy/config.git
 ./init.sh
@@ -325,8 +325,8 @@ shutdown -r now
 ```
 
 ```sh
-sudo pacman -S xclip
-sudo pacman -S fzf
+pacman -S xclip
+pacman -S fzf
 yay -S ccat
 ```
 
@@ -335,15 +335,15 @@ yay -S ccat
 
 # https://github.com/zimfw/zimfw
 
-sudo pacman -S neofetch
+pacman -S neofetch
 
-sudo pacman -S tree
+pacman -S tree
 ```
 
 ```sh
 # nvim
 
-sudo pacman -S python python-pip
+pacman -S python python-pip
 pip3 install pynvim
 pip3 install --upgrade pynvim
 # https://github.com/neovim/pynvim
@@ -364,26 +364,26 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ```sh
 # ranger
 
-sudo pacman -S ueberzug
+pacman -S ueberzug
 # preview image
 # https://github.com/ranger/ranger/wiki/Image-Previews#with-ueberzug
 yay -S epub-thumbnailer-git
 # preview epub
 # scope.sh in ranger config
 
-sudo pacman -S zathura zathura-pdf-mupdf
+pacman -S zathura zathura-pdf-mupdf
 # https://wiki.archlinux.org/title/zathura
 yay -S zaread-git
-sudo pacman -S libreoffice-fresh
-sudo pacman -S jdk-openjdk # optional dependencies
+pacman -S libreoffice-fresh
+pacman -S jdk-openjdk # optional dependencies
 # https://github.com/paoloap/zaread
 # https://aur.archlinux.org/packages/zaread-git
-	sudo pacman -S pandoc
+	pacman -S pandoc
 
-sudo pacman -S feh
+pacman -S feh
 yay -S h-m-m-git
 
-sudo pacman -S trash-cli
+pacman -S trash-cli
 ```
 
 
@@ -393,19 +393,19 @@ sudo pacman -S trash-cli
 ## file manager
 
 ```sh
-sudo pacman -S thunar
+pacman -S thunar
 ```
 
 ## cloud
 
 ```sh
-sudo pacman -S nutstore
+pacman -S nutstore
 
 yay -S electron11-bin
 yay -S baidunetdisk-electron
 
 rslsync
-sudo pacman -S rslsync
+pacman -S rslsync
 systemctl enable --now rslsync
 http://localhost:8888
 # https://program-think.blogspot.com/2015/01/BitTorrent-Sync.html
@@ -414,27 +414,27 @@ mkdir ~/rslsync
 sudo setfacl -R -m "u:rslsync:rwx" /home/aidan
 # https://kenfavors.com/code/how-to-add-user-permissions-to-a-folder-in-ubuntu/
 
-sudo pacman -S qbittorrent-enhanced-git
+pacman -S qbittorrent-enhanced-git
 # https://github.com/XIU2/TrackersListCollection
 # https://mp.weixin.qq.com/s/8pq51vkhiNh-y2eNyBdsiQ
 test:
 # https://ubuntu.com/download/alternative-downloads#bittorrent
-	sudo pacman -S aria2
+	pacman -S aria2
 ```
 
 ## fcitx
 
 ```sh
-sudo pacman -S fcitx5-im
-sudo pacman -S fcitx5-chinese-addons
-sudo pacman -S fcitx5-pinyin-zhwiki
+# https://wiki.archlinux.org/title/Fcitx5
+
+pacman -S fcitx5-im
+pacman -S fcitx5-chinese-addons
+pacman -S fcitx5-pinyin-zhwiki fcitx5-pinyin-moegirl
 sudo -e /etc/environment
 #+GTK_IM_MODULE=fcitx
 #+QT_IM_MODULE=fcitx
 #+XMODIFIERS=@im=fcitx
-#+INPUT_METHOD=fcitx
 #+SDL_IM_MODULE=fcitx
-#+GLFW_IM_MODULE=ibus
 ```
 
 ## general
@@ -442,34 +442,34 @@ sudo -e /etc/environment
 ```sh
 # password
 
-sudo pacman -S keepassxc
+pacman -S keepassxc
 ```
 
 ```sh
 # pdf
 
-sudo pacman -S pdfarranger
+pacman -S pdfarranger
 
-sudo pacman -S xournalpp
+pacman -S xournalpp
 # add image, text
 ```
 
 ```sh
 # image
 
-sudo pacman -S imagemagick
+pacman -S imagemagick
 ```
 
 ```sh
 # office
 
-	sudo pacman -S libreoffice-fresh
+	pacman -S libreoffice-fresh
 ```
 
 ```sh
 # screen capture
 
-sudo pacman -S flameshot
+pacman -S flameshot
 ```
 
 ## gtk and qt themes
@@ -477,10 +477,10 @@ sudo pacman -S flameshot
 - gtk
 
 ```sh
-sudo pacman -S lxappearance
+pacman -S lxappearance
 # https://wiki.archlinux.org/title/GTK#Configuration_tools
 
-sudo pacman -S arc-icon-theme
+pacman -S arc-icon-theme
 # icon theme
 
 yay -S breeze-snow-cursor-theme
