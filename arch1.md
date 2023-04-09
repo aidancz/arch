@@ -426,10 +426,13 @@ test:
 
 ```sh
 # https://wiki.archlinux.org/title/Fcitx5
+# https://sspai.com/post/72622
+# https://sspai.com/post/42667
 
 pacman -S fcitx5-im
 pacman -S fcitx5-chinese-addons
 pacman -S fcitx5-pinyin-zhwiki fcitx5-pinyin-moegirl
+yay -S fcitx5-solarized
 sudo -e /etc/environment
 #+GTK_IM_MODULE=fcitx
 #+QT_IM_MODULE=fcitx
@@ -477,12 +480,13 @@ pacman -S flameshot
 - gtk
 
 ```sh
-pacman -S lxappearance
-# https://wiki.archlinux.org/title/GTK#Configuration_tools
+	pacman -S lxappearance
+	# https://wiki.archlinux.org/title/GTK#Configuration_tools
+	pacman -S qt5ct
 
+yay -S qt5-styleplugins
+# https://wiki.archlinux.org/title/qt#Styles_in_Qt_5
+
+pacman -S arc-solid-gtk-theme
 pacman -S arc-icon-theme
-# icon theme
-
-yay -S breeze-snow-cursor-theme
-# cursor theme
 ```
